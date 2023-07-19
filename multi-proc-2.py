@@ -14,7 +14,7 @@ def main_multiprocessing():
   # add your code here
   for g in range(len(greetings)):
     # create a process
-    p = multiprocessing.Process(target=greeting_with_sleep, args=([g],))
+    p = multiprocessing.Process(target=greeting_with_sleep, args=(greetings[g],))
     processes.append(p)
     if __name__ == '__main__':
       p.start()
